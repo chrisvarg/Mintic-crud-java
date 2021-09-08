@@ -18,12 +18,23 @@ public class Usuario {
     private String telephone;
     private String email;
     private String password;
-    private Date date;
+    private String date;
 
     /**
      * Método Constructor de la clase Usuario
      */
+
     public Usuario(){
+
+    }
+    public Usuario(String alias, String name, String lastName, String telephone, String email, String password, String date){
+        this.alias      = alias;
+        this.name       = name;
+        this.lastName   = lastName;
+        this.telephone  = telephone;
+        this.email      = email;
+        this.password   = password;
+        this.date       = date;
 
     }
 
@@ -36,9 +47,9 @@ public class Usuario {
      */
     public Usuario(String alias, String name, String email, String password){
         this.alias = alias;
-        this.name = alias;
-        this.email = alias;
-        this.password = alias;
+        this.name = name;
+        this.email = email;
+        this.password = password;
     }
 
     /**
@@ -141,7 +152,7 @@ public class Usuario {
      * Obtiene la información almacenada en el atributo date
      * @return atributo date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -149,7 +160,7 @@ public class Usuario {
      * Asigna información al atributo date
      * @param date información de entrada
      */
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
